@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/** 
+   Bang So Jung CSS
+   http://bangsojung.com/
+**/
+/*
+
+        레이아웃 가이드 CSS
+
+*/
+
+
+/*------------------------------------------------------
+    HEADER
+------------------------------------------------------*/
+#HEADER {position:fixed;top:0;left:0;width:100%;background-color:#fff;border-bottom:1px solid #eef1f5;z-index:9999;}
+#HEADER header {display:flex;justify-content:space-between;align-items:center;max-width:1200px;height:100px;margin:0 auto;}
+#HEADER.header_sub header {max-width:1280px;height:80px;}
+.header__top {display:flex;align-items:center;}
+.header__logo {width:450px;height:34px;background-image:url(../../images/common/logo-multi.png);background-repeat:no-repeat;background-position:center;}
+@media screen and (max-width: 1360px){
+    #HEADER.header_sub header {margin:0 40px;}
+}
+@media screen and (max-width: 1280px){
+    #HEADER header {margin:0 40px;}
+}
+@media screen and (max-width: 1230px){
+    #HEADER header {margin:0 15px;}
+    #HEADER.header_sub header {margin:0 15px;}
+}
+@media screen and (max-width: 1024px){
+    #HEADER {background-color:#33393f;border-bottom-color:#33393f;}
+    #HEADER.header_sub {border-bottom:none;}
+    #HEADER header {height:55px;}
+    #HEADER.header_sub header {height:55px;}
+    .header__top {}
+    .header__logo {width:85px;height:36px;background-image:url(../../images/common/logo-multi-m.png);background-size:contain;}
+}
+@media screen and (max-width: 370px){
+    .header__logo {width:60px;}
+}
+
+/*  검색  */
+.header__search {position:relative;width:255px;margin-left:3rem;}
+.header__search .select_int {width:100%;height:40px;padding:0 15px;padding-right:50px;border:1px solid #c7e0ff;box-sizing:border-box;font-size:14px;color:#555;}
+.header__search .select_btn {position:absolute;top:0;right:0;width:40px;height:40px;background-color:transparent;}
+.header__search .select_btn img {height:20px;}
+@media screen and (max-width: 1024px){
+    .header__search .select_int {height:35px;padding-right:45px;background-color:#242d37;border-color:#242d37;border-radius:5px !important;}
+    .header__search .select_btn {height:35px;width:35px;}
+}
+@media screen and (max-width: 500px){
+    .header__search {width:170px;margin-left:1rem;}
+}
+@media screen and (max-width: 424px){
+    .header__search {width:155px;}
+}
+@media screen and (max-width: 370px){
+    .header__search {width:140px;}
+}
+
+/*  header__gnb */
+.header__gnb {display:flex;align-items:center;}
+.header__gnb > a {display:flex;align-items:center;font-size:16px;color:#015cca;}
+.head_login i {width:24px;height:24px;margin-right:8px;background-image:url(../../images/common/login-icon.png);background-repeat:no-repeat;background-position:center;}
+.head_my {width:175px;}
+.head_my i {width:35px;height:35px;background-image:url(../../images/common/user.png);background-repeat:no-repeat;background-position:center;background-size:100%;border-radius:35px;}
+.head_my > div {width:calc(100% - 35px);padding-left:1rem;line-height:1.4;box-sizing:border-box;}
+.head_my > div strong {display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-weight:500;font-size:15px;color:#111;}
+.head_my > div span {display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-weight:400;font-size:13px;color:#111;}
+.head_upload {justify-content:center;width:125px;height:40px;margin-right:20px;background-color:#0032a2;border-radius:6px;font-size:14px;text-align:center;}
+.head_upload i {width:52px;height:50px;margin-left:-19px;background-image:url(../../images/common/ico-docinfo.png);background-repeat:no-repeat;background-position:0 -30px;transform:scale(0.4);}
+.head_upload span {margin-left:-5px;color:#fff;}
+.head_office {margin-left:25px;}
+.head_office i {width:34px;height:34px;margin-right:4px;background-image:url(../../images/common/icon_offic.png);background-repeat:no-repeat;background-position:center;background-size:100%;}
+.head_office span:before {content:'폴라리스 오피스 계정으로 시작하기';}
+@media screen and (max-width: 1230px){
+    .header__gnb > a {font-size:15px;}
+    .head_upload {width:105px;margin-right:10px;}
+    .head_my strong {margin-left:.5rem;}
+    .head_upload {width:35px;height:35px;margin-right:10px;border-radius:50%;}
+    .head_upload span {display:none;}
+    .head_upload i {margin-left:0;background-position:-10px -34px;}
+}
+@media screen and (max-width: 1024px){
+    .header__gnb > a {color:#fff;}
+    .head_login i {margin-right:8px;background-image:url(../../images/common/ico-login.png);}
+    .head_my {width:auto;}
+    .head_my div {display:none;}
+    .head_office span {font-size:13px;}
+    .head_office span:before {content:'폴라리스 오피스로 시작';}
+}
+@media screen and (max-width: 640px){
+    .head_office {margin-left:12px;}
+    .head_upload {margin-right:5px;}
+    .head_office i,
+    .head_login i {margin-right:3px;}
+    .header__gnb > a {font-size:13px;}
+}
+@media screen and (max-width: 370px){
+    .head_office span {width:75px;font-size:11px;}
+    .header__gnb > a {font-size:14px;}
+    .head_my i {width:34px;}
+}
+
+/*  추천태그    */
+.haeder__featured_tags {height:50px;background-color:#eef1f5;}
+.haeder__featured_tags .maxWidth {max-width:1280px;height:100%;padding:0 15px;box-sizing:border-box;}
+.featured_tags__area {display:flex;align-items:center;height:100%;}
+.featured_tags_title {width:80px;font-size:15px;color:#52565d;}
+.featured_tags_body {display:flex;}
+.featured_tags_body > a {display:flex;justify-content:center;align-items:center;height:33px;margin-right:10px;padding:0 17px;background-color:#fff;border-radius:33px;font-size:13px;color:#555;}
+.featured_tags_body > a:before {content:'#';}
+@media screen and (min-width: 1025px){
+    .featured_tags_body > a:hover {background-color:#859bb8;color:#fff;}
+}
+@media screen and (max-width: 1360px){
+    .haeder__featured_tags .maxWidth {margin:0 40px;}
+}
+@media screen and (max-width: 1230px){
+    .haeder__featured_tags .maxWidth {margin:0 15px;padding:0;}
+}
+@media screen and (max-width: 1024px){
+    .haeder__featured_tags .maxWidth {padding:0;}
+    .featured_tags_title {display:none;}
+    .haeder__featured_tags {height:40px;}
+    .featured_tags_body > a {white-space:nowrap;height:25px;padding:0 10px;border:1px solid #90b6e6;box-sizing:border-box;}
+    .featured_tags_body > a:active {background-color:#859bb8;color:#fff;}
+    .haeder__featured_tags {overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;}
+    .haeder__featured_tags::-webkit-scrollbar {display:none;}
+}
+
+
+
+
+/*------------------------------------------------------
+    CONTAINER
+------------------------------------------------------*/
+#CONTAINER {outline:none;}
+#MAIN {margin-top:100px;}
+#SUB {margin-top:130px;}
+@media screen and (max-width: 1024px){
+    #MAIN {margin-top:55px;}
+    #SUB {margin-top:95px;}
+}
+
+
+
+
+/*------------------------------------------------------
+    FOOTER
+------------------------------------------------------*/
+#top_btn {position:fixed;right:20px;bottom:20px;z-index:999;background-color:transparent;opacity:0;-webkit-transition-duration:.6s;-m-transition-duration:.6s;-o-transition-duration:.6s;-ms-transition-duration:.6s;transition-duration:.6s}
+#FOOTER .foot_menu {display:flex;justify-content:center;align-items:center;height:4.6rem;padding:0 15px;background-color:#f8f8f8;}
+#FOOTER .foot_menu a {display:flex;align-items:center;font-size:1.6rem;color:#5c5c5c;}
+#FOOTER .foot_menu a:before {content:'';display:inline-block;width:1px;height:1.4rem;margin:0 2.4rem;background-color:#d2d2d2;}
+#FOOTER .foot_menu a:first-child:before {content:none;}
+.footer__body {display:flex;justify-content:space-between;align-items:center;padding:2.5rem 0;}
+.foot_logo {width:224px;height:50px;background-image:url(../../images/common/sp_ico.png);background-repeat:no-repeat;background-position:0px -100px;}
+.foot_addr {font-size:12px;color:#8a8a8a;}
+.foot_sns {display:flex;align-items:center;}
+.foot_sns > a {width:40px;height:40px;margin-left:10px;background-image:url(../../images/common/sp_ico.png);background-repeat:no-repeat;}
+.foot_sns > a.sns_facebook {margin-left:0;background-position:0px -60px;}
+.foot_sns > a.sns_twitter {background-position:-40px -60px;}
+.foot_sns > a.sns_blog {background-position:-160px -60px;}
+.foot_sns > a.sns_medium {background-position:-240px -60px;}
+.foot_sns > a.sns_telegram {background-position:-280px -60px;}
+.foot_sns > a.sns_reddit {background-position:-320px -60px;}
+.foot_family select {width:180px;line-height:40px;padding:0 1rem;background-color:#fff;border:1px solid #5e5e5e;box-sizing:border-box;font-size:14px;color:#000;}
+@media screen and (max-width: 1230px){
+    #top_btn {right:15px;}
+}
+@media screen and (max-width: 1024px){
+    .footer__body {flex-direction:column;text-align:center;}
+    .foot_addr {margin:2rem 0;}
+    .foot_sns {margin:0 0 2rem 0;}
+    .foot_family select {line-height:35px;}
+    #top_btn img {height:35px;}
+}
+@media screen and (max-width: 370px){
+    .foot_family select {width:150px;font-size:13px;}
+
+}
